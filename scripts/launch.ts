@@ -19,7 +19,7 @@ async function burn_token(token: string, sg721:any) {
     'auto',
     'burn'
   );
-  const wasmEvent = result.logs[0].events.find((e) => e.type === 'wasm');
+  const wasmEvent = result.logs[0].events.find((e:any) => e.type === 'wasm');
   console.info(
     'The `wasm` event emitted by the contract execution:',
     wasmEvent
@@ -43,7 +43,7 @@ async function mintTo(recipient: string, minterAddress:string) {
     'auto',
     'mint to'
   );
-  const wasmEvent = result.logs[0].events.find((e) => e.type === 'wasm');
+  const wasmEvent = result.logs[0].events.find((e:any) => e.type === 'wasm');
   console.info(
     'The `wasm` event emitted by the contract execution:',
     wasmEvent
