@@ -1,0 +1,23 @@
+{
+  "name": "Stargazers Challenge Coin #194",
+  "description": "An NFT challenge coin airdropped exclusively to minters of the Stargazers First Federation",
+  "image": "ipfs://NewUriToReplace/194.png",
+  "attributes": [
+    {
+      "trait_type": "Coin",
+      "value": "First Federation Minter"
+    },
+    {
+      "trait_type": "Power",
+      "value": "65"
+    },
+    {
+      "trait_type": "Weight",
+      "value": "54"
+    },
+    {
+      "trait_type": "Shiny",
+      "value": "62"
+    }
+  ]
+}
