@@ -41,6 +41,8 @@
     "devops-rarity": "ts-node devops/rarity.ts",
     "devops-launch": "ts-node devops/testnet-launch.ts",
     "launch":"ts-node scripts/launch.ts",
-    "start": "node server/index.js"
+    "start": "node server/index.js",
+    "build": "tsc",
+    "postinstall": "yarn run build"
   }
 }
