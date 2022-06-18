@@ -22,27 +22,10 @@
     "express": "^4.18.1"
   },
   "scripts": {
-    "account": "ts-node scripts/account.ts",
-    "airdrop-file": "ts-node scripts/airdrop-file.ts",
-    "minter": "ts-node scripts/minter.ts",
-    "mint": "ts-node scripts/mint.ts",
-    "burn":"ts-node scripts/burn.ts",
-    "nft-storage-upload": "ts-node scripts/nft-storage-upload.ts",
-    "nft-storage-clean": "ts-node scripts/nft-storage-clean.ts",
-    "pack-images": "ipfs-car --pack images --output images.car",
-    "pack-metadata": "ipfs-car --pack metadata --output metadata.car",
-    "pinata-upload": "ts-node scripts/pinata-upload.ts",
-    "pinata-clean": "ts-node scripts/pinata-clean.ts",
-    "query": "ts-node scripts/query.ts",
     "ts": "tsc --noEmit --incremental",
-    "whitelist": "ts-node scripts/whitelist.ts",
-    "whitelist-file": "ts-node scripts/whitelist-file.ts",
-    "devops-pin": "ts-node devops/pin.ts",
-    "devops-rarity": "ts-node devops/rarity.ts",
-    "devops-launch": "ts-node devops/testnet-launch.ts",
     "launch":"ts-node scripts/launch.ts",
     "start": "node server/index.js",
-    "build": "tsc",
+    "build": "yarn run ts",
     "postinstall": "yarn run build"
   }
 }
