@@ -10,7 +10,9 @@
   },
   "dependencies": {
     "@pinata/sdk": "^1.1.23",
+    "@types/node": "^18.0.0",
     "csv-parse": "^5.0.4",
+    "express": "^4.18.1",
     "files-from-path": "^0.2.3",
     "inquirer": "^8.2.0",
     "ipfs-car": "^0.6.1",
@@ -18,12 +20,11 @@
     "nft.storage": "^6.0.0",
     "node-fetch": "2.6.1",
     "ts-node": "^10.5.0",
-    "typescript": "^4.5.5",
-    "express": "^4.18.1"
+    "typescript": "^4.5.5"
   },
   "scripts": {
     "ts": "tsc --noEmit --incremental",
-    "launch":"ts-node scripts/launch.ts",
+    "launch": "ts-node scripts/launch.ts",
     "start": "node server/index.js",
     "build": "yarn run ts",
     "postinstall": "yarn run build"
