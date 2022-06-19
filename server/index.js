@@ -7,7 +7,7 @@ const PORT = process.env.PORT || 3000;
 const app = express();
 
 app.get("/api", (req, res) => {
-  res.set('Access-Control-Allow-Origin', 'https://main.dbop22oac4irw.amplifyapp.com/');
+  res.set('Access-Control-Allow-Origin', 'https://launchpad.stargazersnfts.io');
   console.log("rocketId =", req.query.rocketId);
   console.log("fuelId =", req.query.fuelId);
   console.log("starsAddress =", req.query.starsAddress);
