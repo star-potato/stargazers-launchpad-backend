@@ -49,6 +49,7 @@ async function mintTo(recipient: string, minterAddress:string) {
     wasmEvent
   );
   const tokenId = wasmEvent?.attributes?.find((a) => a.key === "token_id");
+  console.log(tokenId);
   return tokenId;
 }
 
