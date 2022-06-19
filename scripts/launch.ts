@@ -107,7 +107,8 @@ async function burn2mint1(rocketId:string, fuelId:string, starsAddress:string, m
   }
   //mint new token
   const responseMint = await mintTo(starsAddress, minterAddress);
-    console.error ('MINTSUCCESS ' + responseMint);
+    console.error ('MINTSUCCESS responseMint =' + responseMint);
+    return ('MINTSUCCESS responseMint =' + responseMint);
 }
 
 const args = process.argv.slice(2);
