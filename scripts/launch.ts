@@ -49,8 +49,8 @@ async function mintTo(recipient: string, minterAddress:string) {
     wasmEvent
   );
   const tokenId = wasmEvent?.attributes?.find((a) => a.key === "token_id");
-  console.log(tokenId);
-  return tokenId;
+  console.log(tokenId?.value);
+  return tokenId?.value;
 }
 
 async function queryInfo(tokenId:string, sg721:string){
@@ -108,8 +108,17 @@ async function burn2mint1(rocketId:string, fuelId:string, starsAddress:string, m
   }
   //mint new token
   const responseMint = await mintTo(starsAddress, minterAddress);
-    console.error ('MINTSUCCESS responseMint =' + responseMint);
-    return ('MINTSUCCESS responseMint =' + responseMint);
+    const urlBase = config.tokenURL;
+    let tokenFullUrl = null;
+    if (minterAddress === config.minterHumansTest){
+      tokenFullUrl = urlBase + config.sg721Humans + '/' + responseMint;
+    } else if (minterAddress === config.minterDemonsTest){
+      tokenFullUrl = urlBase + config.sg721Demons + '/' + responseMint;
+    } else if (minterAddress === config.minterCephalopodsTest){
+      tokenFullUrl = urlBase + config.sg721Cephalopods + '/' + responseMint;
+    }
+    console.error ('MINTSUCCESS ' + tokenFullUrl);
+    return ('MINTSUCCESS ' + tokenFullUrl);
 }
 
 const args = process.argv.slice(2);
