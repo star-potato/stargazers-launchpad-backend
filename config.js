@@ -81,15 +81,16 @@ module.exports = {
   minter: 'stars1dxvxg62skehcskngl5n3d5zujz3ll8rvcplqhvmzyad7ka3kg2psf5yzn0',
   sg721: 'stars17na9kn8jh8qd22f6xxeqa54p6atu0m0lvkwtasdqmjc52qzvt60su9nzra',
   minterHumansTest:'stars1k77nwkyzqyagjl3yqf65kg6ryqepx97mjrjgr96sl4yvf0c6j5kskt3t64',
-  minterHumans: '',
+  sg721Humans: 'stars15n2x6kyfvslghvwfptz7w9gpz9zkyhlyvzdg9kpjr9gx5ed8ca8qgegl3l',
   minterDemonsTest:'stars174kcxuu4jzs4ap487pmqa9xjhyafyug6vu6kzp5w33dwxc9r3q4sd4cfne',
-  minterDemons: '',
+  sg721Demons: 'stars19hzqtwn7hkw655q84kcsry6f3rzg8gfnk38e23dkjdjurt9ctzqqn38yhu',
   minterCephalopodsTest:'stars1vaf7x8shaa0lvk4rguhqddm8qpz4zjur8lklxgct6hjc5hld6z0sgshswa',
-  minterCephalopods: '',
+  sg721Cephalopods: 'stars1yzztxccy2kdw2ghx02e4358mqqengrqgp0r5p7jr9cu5h8nmr86qkppjtz',
   sg721FuelsTest:'stars17na9kn8jh8qd22f6xxeqa54p6atu0m0lvkwtasdqmjc52qzvt60su9nzra',
   sg721Fuels: '',
   sg721RocketsTest:'stars1w73dekjygm4wwx6d8j6e4ymywzalhys77pw5a4z0gp023yu3a89sujy3zd',
   sg721Rockets: '',
+  tokenURL: 'https://testnet.publicawesome.dev/media/',
 
   // SG721 contract address
   // Get this after running `yarn minter`

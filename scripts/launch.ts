@@ -48,6 +48,8 @@ async function mintTo(recipient: string, minterAddress:string) {
     'The `wasm` event emitted by the contract execution:',
     wasmEvent
   );
+  const tokenId = wasmEvent?.attributes?.find((a) => a.key === "token_id");
+  return tokenId;
 }
 
 async function queryInfo(tokenId:string, sg721:string){
@@ -105,7 +107,7 @@ async function burn2mint1(rocketId:string, fuelId:string, starsAddress:string, m
   }
   //mint new token
   const responseMint = await mintTo(starsAddress, minterAddress);
-    console.error ('MINTSUCCESS');
+    console.error ('MINTSUCCESS ' + responseMint);
 }
 
 const args = process.argv.slice(2);
