@@ -29,7 +29,7 @@
   "scripts": {
     "ts": "tsc --noEmit --incremental",
     "launch": "ts-node scripts/launch.ts",
-    "start": "node server/index.js",
+    "start": "node --optimize_for_size --max_old_space_size=460 server/index.js",
     "build": "yarn run ts",
     "postinstall": "yarn run build"
   }
