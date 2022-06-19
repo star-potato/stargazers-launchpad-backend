@@ -15,8 +15,7 @@ app.get("/api", (req, res) => {
   const command = "yarn launch " + req.query.rocketId + " " + req.query.fuelId + " " + req.query.starsAddress + " " + req.query.pfpMinter;
   burnNMint(command, function (result){
     console.log('result = ', result);
-    let finalResult = result.slice(45);
-    res.send(finalResult);
+    res.send(result);
   });
   
 });
