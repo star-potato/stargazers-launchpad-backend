@@ -64,7 +64,7 @@ async function queryInfo(tokenId:string, sg721:string){
 
 async function burn2mint1(rocketId:string, fuelId:string, starsAddress:string, minterAddress:string){
   //query fuel owner
-  const responseQueryFuel = await queryInfo(fuelId, config.sg721FuelsTest);
+  const responseQueryFuel = await queryInfo(fuelId, config.sg721Fuels);
   console.log('responseQueryFuel.access.owner =', responseQueryFuel.access.owner);
   console.log('starsAddress =', starsAddress);
   console.log('approvals length = ', responseQueryFuel.access.approvals.length);
@@ -79,7 +79,7 @@ async function burn2mint1(rocketId:string, fuelId:string, starsAddress:string, m
 
 
   //query rocket owner
-  const responseQueryRocket = await queryInfo(fuelId, config.sg721RocketsTest);
+  const responseQueryRocket = await queryInfo(fuelId, config.sg721Rockets);
   console.log('responseQueryRocket.access.owner', responseQueryRocket.access.owner);
   console.log('starsAddress', starsAddress);
   console.log('approvals length =', responseQueryRocket.access.approvals.length);
@@ -94,14 +94,14 @@ async function burn2mint1(rocketId:string, fuelId:string, starsAddress:string, m
 
   //burn fuel
   try {
-    const responseBurnFuel = await burn_token(fuelId, config.sg721FuelsTest);
+    const responseBurnFuel = await burn_token(fuelId, config.sg721Fuels);
   } catch {
     console.error('FUELBURNERROR');
     return 'FUELBURNERROR';
   }
   //burn rocket
   try {
-    const responseBurnRocket = await burn_token(rocketId, config.sg721RocketsTest);
+    const responseBurnRocket = await burn_token(rocketId, config.sg721Rockets);
   } catch {
     console.error ('ROCKETBURNERROR');
     return 'ROCKETBURNERROR';
@@ -110,12 +110,14 @@ async function burn2mint1(rocketId:string, fuelId:string, starsAddress:string, m
   const responseMint = await mintTo(starsAddress, minterAddress);
     const urlBase = config.tokenURL;
     let tokenFullUrl = null;
-    if (minterAddress === config.minterHumansTest){
+    if (minterAddress === config.minterHumans){
       tokenFullUrl = urlBase + config.sg721Humans + '/' + responseMint;
-    } else if (minterAddress === config.minterDemonsTest){
+    } else if (minterAddress === config.minterDemons){
       tokenFullUrl = urlBase + config.sg721Demons + '/' + responseMint;
-    } else if (minterAddress === config.minterCephalopodsTest){
+    } else if (minterAddress === config.minterCephalopods){
       tokenFullUrl = urlBase + config.sg721Cephalopods + '/' + responseMint;
+    } else if (minterAddress === config.minterEpics){
+      tokenFullUrl = urlBase + config.sg721Epics + '/' + responseMint;
     }
     console.error ('MINTSUCCESS ' + tokenFullUrl);
     return ('MINTSUCCESS ' + tokenFullUrl);

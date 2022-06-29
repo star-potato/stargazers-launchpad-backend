@@ -9,7 +9,7 @@ module.exports = {
   // The account seed phrase to use for deployment
   mnemonic: 'REPLACEME',
   // Your STARS address
-  account: 'stars1dqf384y0f3epc9mldqpgwklxvylxu8qulvynnn',
+  account: 'stars14yc957g6dqcvsp45l8ar2l8fnysy4y4p6fn4r3',
 
   //// API CONFIG ////
   // The RPC endpoint for Stargaze, Double Double Testnet
@@ -78,18 +78,16 @@ module.exports = {
   startTime: '2022-03-11T21:00:00.000Z',
   // The minter contract address
   // Get this after running `yarn minter`
-  minter: 'stars1dxvxg62skehcskngl5n3d5zujz3ll8rvcplqhvmzyad7ka3kg2psf5yzn0',
-  sg721: 'stars17na9kn8jh8qd22f6xxeqa54p6atu0m0lvkwtasdqmjc52qzvt60su9nzra',
-  minterHumansTest:'stars1k77nwkyzqyagjl3yqf65kg6ryqepx97mjrjgr96sl4yvf0c6j5kskt3t64',
-  sg721Humans: 'stars15n2x6kyfvslghvwfptz7w9gpz9zkyhlyvzdg9kpjr9gx5ed8ca8qgegl3l',
-  minterDemonsTest:'stars174kcxuu4jzs4ap487pmqa9xjhyafyug6vu6kzp5w33dwxc9r3q4sd4cfne',
-  sg721Demons: 'stars19hzqtwn7hkw655q84kcsry6f3rzg8gfnk38e23dkjdjurt9ctzqqn38yhu',
-  minterCephalopodsTest:'stars1vaf7x8shaa0lvk4rguhqddm8qpz4zjur8lklxgct6hjc5hld6z0sgshswa',
-  sg721Cephalopods: 'stars1yzztxccy2kdw2ghx02e4358mqqengrqgp0r5p7jr9cu5h8nmr86qkppjtz',
-  sg721FuelsTest:'stars17na9kn8jh8qd22f6xxeqa54p6atu0m0lvkwtasdqmjc52qzvt60su9nzra',
-  sg721Fuels: '',
-  sg721RocketsTest:'stars1w73dekjygm4wwx6d8j6e4ymywzalhys77pw5a4z0gp023yu3a89sujy3zd',
-  sg721Rockets: '',
+  minterHumans:'stars19equv33mget3ank0yxr5k3my7u9t6f7fakdy42g5rc4mv0ycaz3s3pfy3j',
+  sg721Humans: 'stars1ppnknq0xsmk9cd5frt7xujq6hqcdgg2q78f3hlwlj6a2kapeenlqfdl8zu',
+  minterDemons:'stars10l8a3uzxeqy955rk2h485cdswdtxvegdgzsr5cxuzlpah4l36t3q5msp3k',
+  sg721Demons: 'stars1gp8ykupusa8mle5sj0dmccgyaeelxw6s7sa3w7urtqgsc4ml503q74ttg4',
+  minterCephalopods:'stars1tz5rc4lpl5rcud7hscgkfnnchf0x9nzgka8ccsnkjvp0utjdtvzqtmufw5',
+  sg721Cephalopods: 'stars1sdm0ran0eumwm999lyd0u045zafw7zku2rwcd948p2fcaakxatns9w0h8z',
+  minterEpics:'stars1k7pluj4gck66mrsmrntmcrhqgla2za0jj4pfsgq2ywxf6534stmqd7hmuj',
+  sg721Epics:'stars1cuhkffartyn6hpdrhp87sqrsar60mfv3t0klfvxp027gmrcwdl4qfqqdxj',
+  sg721Fuels:'stars19sz50cf509rlrxz5d6cc9j56exdh3adn3ga50l802twe24p69xaqnw0chj',
+  sg721Rockets:'stars1dzdpl72ej6eetn49ygaqj5pplyq5hz5f5h48w806wnmgmftmwq0qa5a5at',
   tokenURL: 'https://testnet.publicawesome.dev/media/',
 
   // SG721 contract address
