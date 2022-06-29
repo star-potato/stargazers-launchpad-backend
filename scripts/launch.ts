@@ -64,32 +64,42 @@ async function queryInfo(tokenId:string, sg721:string){
 
 async function burn2mint1(rocketId:string, fuelId:string, starsAddress:string, minterAddress:string){
   //query fuel owner
-  const responseQueryFuel = await queryInfo(fuelId, config.sg721Fuels);
-  console.log('responseQueryFuel.access.owner =', responseQueryFuel.access.owner);
-  console.log('starsAddress =', starsAddress);
-  console.log('approvals length = ', responseQueryFuel.access.approvals.length);
-  if (!starsAddress === responseQueryFuel.access.owner){
-    console.error('FUELNOTOWNER');
-    return 'FUELNOTOWNER';
-  }
-  if (responseQueryFuel.access.approvals.length === 0){
-    console.error('FUELNOAPPROVAL');
-    return 'FUELNOAPPROVAL';
+  try{
+    const responseQueryFuel = await queryInfo(fuelId, config.sg721Fuels);
+    console.log('responseQueryFuel.access.owner =', responseQueryFuel.access.owner);
+    console.log('starsAddress =', starsAddress);
+    console.log('approvals length = ', responseQueryFuel.access.approvals.length);
+    if (!starsAddress === responseQueryFuel.access.owner){
+      console.error('FUELNOTOWNER');
+      return 'FUELNOTOWNER';
+    }
+    if (responseQueryFuel.access.approvals.length === 0){
+      console.error('FUELNOAPPROVAL');
+      return 'FUELNOAPPROVAL';
+    }
+  } catch {
+    console.error('FUELQUERYERROR');
+    return 'FUELQUERYERROR';
   }
 
 
   //query rocket owner
-  const responseQueryRocket = await queryInfo(fuelId, config.sg721Rockets);
-  console.log('responseQueryRocket.access.owner', responseQueryRocket.access.owner);
-  console.log('starsAddress', starsAddress);
-  console.log('approvals length =', responseQueryRocket.access.approvals.length);
-  if (!starsAddress === responseQueryRocket.access.owner){
-    console.error('ROCKETNOTOWNER');
-    return 'ROCKETNOTOWNER';
-  }
-  if (responseQueryRocket.access.approvals.length === 0){
-    console.error('ROCKETNOAPPROVAL');
-    return 'ROCKETNOAPPROVAL';
+  try {
+    const responseQueryRocket = await queryInfo(fuelId, config.sg721Rockets);
+    console.log('responseQueryRocket.access.owner', responseQueryRocket.access.owner);
+    console.log('starsAddress', starsAddress);
+    console.log('approvals length =', responseQueryRocket.access.approvals.length);
+    if (!starsAddress === responseQueryRocket.access.owner){
+      console.error('ROCKETNOTOWNER');
+      return 'ROCKETNOTOWNER';
+    }
+    if (responseQueryRocket.access.approvals.length === 0){
+      console.error('ROCKETNOAPPROVAL');
+      return 'ROCKETNOAPPROVAL';
+    }
+  } catch {
+    console.error('ROCKETQUERYERROR');
+    return 'ROCKETQUERYERROR';
   }
 
   //burn fuel
