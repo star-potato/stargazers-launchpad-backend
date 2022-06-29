@@ -86,8 +86,8 @@ module.exports = {
   sg721Cephalopods: 'stars1sdm0ran0eumwm999lyd0u045zafw7zku2rwcd948p2fcaakxatns9w0h8z',
   minterEpics:'stars1k7pluj4gck66mrsmrntmcrhqgla2za0jj4pfsgq2ywxf6534stmqd7hmuj',
   sg721Epics:'stars1cuhkffartyn6hpdrhp87sqrsar60mfv3t0klfvxp027gmrcwdl4qfqqdxj',
-  sg721Fuels:'stars19sz50cf509rlrxz5d6cc9j56exdh3adn3ga50l802twe24p69xaqnw0chj',
-  sg721Rockets:'stars1dzdpl72ej6eetn49ygaqj5pplyq5hz5f5h48w806wnmgmftmwq0qa5a5at',
+  sg721Fuels:'stars1a2akm58cv8p0qk5yw398mm4zg3jw3ee5j8qyq9hzfwzpg07kgqqsfy4c2s',
+  sg721Rockets:'stars186tjfdguldrvrt6dcyqk0afwv5pcm8tl9y2p2qvjf36vfwlxnu5qys7pue',
   tokenURL: 'https://testnet.publicawesome.dev/media/',
 
   // SG721 contract address
