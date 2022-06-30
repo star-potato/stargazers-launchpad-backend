@@ -105,15 +105,17 @@ async function burn2mint1(rocketId:string, fuelId:string, starsAddress:string, m
   //burn fuel
   try {
     const responseBurnFuel = await burn_token(fuelId, config.sg721Fuels);
-  } catch {
+  } catch(err) {
     console.error('FUELBURNERROR');
+    console.error(err);
     return 'FUELBURNERROR';
   }
   //burn rocket
   try {
     const responseBurnRocket = await burn_token(rocketId, config.sg721Rockets);
-  } catch {
+  } catch(err){
     console.error ('ROCKETBURNERROR');
+    console.error(err);
     return 'ROCKETBURNERROR';
   }
   //mint new token
