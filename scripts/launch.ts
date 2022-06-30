@@ -137,7 +137,7 @@ async function burn2mint1(rocketId:string, fuelId:string, starsAddress:string, m
       imgAdr = config.epicImg + responseMint + '.png';
     }
     console.error ('MINTSUCCESS ' + tokenFullUrl);
-    return ('MINTSUCCESS ' + tokenFullUrl + ' ' + imgAdr);
+    return ('MINTSUCCESS~' + tokenFullUrl + '~' + imgAdr);
 }
 
 const args = process.argv.slice(2);
