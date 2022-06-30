@@ -103,23 +103,30 @@ async function burn2mint1(rocketId:string, fuelId:string, starsAddress:string, m
   }
 
   //burn fuel
-  try {
-    const responseBurnFuel = await burn_token(fuelId, config.sg721Fuels);
-  } catch(err) {
-    console.error('FUELBURNERROR');
-    console.error(err);
-    return 'FUELBURNERROR';
-  }
+  setTimeout(() => {
+    try {
+      const responseBurnFuel = await burn_token(fuelId, config.sg721Fuels);
+    } catch(err) {
+      console.error('FUELBURNERROR');
+      console.error(err);
+      return 'FUELBURNERROR';
+    }
+  }, 1000); 
+
   //burn rocket
-  try {
-    const responseBurnRocket = await burn_token(rocketId, config.sg721Rockets);
-  } catch(err){
-    console.error ('ROCKETBURNERROR');
-    console.error(err);
-    return 'ROCKETBURNERROR';
-  }
+  setTimeout(() => {
+    try {
+      const responseBurnRocket = await burn_token(rocketId, config.sg721Rockets);
+    } catch(err){
+      console.error ('ROCKETBURNERROR');
+      console.error(err);
+      return 'ROCKETBURNERROR';
+    }
+  },1000);
+
   //mint new token
-  const responseMint = await mintTo(starsAddress, minterAddress);
+  setTimeout(() => {
+    const responseMint = await mintTo(starsAddress, minterAddress);
     const urlBase = config.tokenURL;
     let tokenFullUrl = null;
     let imgAdr = null;
@@ -138,6 +145,7 @@ async function burn2mint1(rocketId:string, fuelId:string, starsAddress:string, m
     }
     console.error ('MINTSUCCESS ' + tokenFullUrl + ' ' + imgAdr);
     return ('MINTSUCCESS ' + tokenFullUrl + ' ' + imgAdr);
+  },1000);
 }
 
 const args = process.argv.slice(2);
