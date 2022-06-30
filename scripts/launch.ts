@@ -103,7 +103,7 @@ async function burn2mint1(rocketId:string, fuelId:string, starsAddress:string, m
   }
 
   //burn fuel
-  setTimeout(() => {
+  setTimeout(async() => {
     try {
       const responseBurnFuel = await burn_token(fuelId, config.sg721Fuels);
     } catch(err) {
@@ -114,7 +114,7 @@ async function burn2mint1(rocketId:string, fuelId:string, starsAddress:string, m
   }, 1000); 
 
   //burn rocket
-  setTimeout(() => {
+  setTimeout(async() => {
     try {
       const responseBurnRocket = await burn_token(rocketId, config.sg721Rockets);
     } catch(err){
@@ -125,7 +125,7 @@ async function burn2mint1(rocketId:string, fuelId:string, starsAddress:string, m
   },1000);
 
   //mint new token
-  setTimeout(() => {
+  setTimeout(async() => {
     const responseMint = await mintTo(starsAddress, minterAddress);
     const urlBase = config.tokenURL;
     let tokenFullUrl = null;
