@@ -122,17 +122,22 @@ async function burn2mint1(rocketId:string, fuelId:string, starsAddress:string, m
   const responseMint = await mintTo(starsAddress, minterAddress);
     const urlBase = config.tokenURL;
     let tokenFullUrl = null;
+    let imgAdr = null;
     if (minterAddress === config.minterHumans){
       tokenFullUrl = urlBase + config.sg721Humans + '/' + responseMint;
+      imgAdr = config.humanImg + responseMint + '.png';
     } else if (minterAddress === config.minterDemons){
       tokenFullUrl = urlBase + config.sg721Demons + '/' + responseMint;
+      imgAdr = config.demonImg + responseMint + '.png';
     } else if (minterAddress === config.minterCephalopods){
       tokenFullUrl = urlBase + config.sg721Cephalopods + '/' + responseMint;
+      imgAdr = config.cephalopodImg + responseMint + '.png';
     } else if (minterAddress === config.minterEpics){
       tokenFullUrl = urlBase + config.sg721Epics + '/' + responseMint;
+      imgAdr = config.epicImg + responseMint + '.png';
     }
     console.error ('MINTSUCCESS ' + tokenFullUrl);
-    return ('MINTSUCCESS ' + tokenFullUrl);
+    return ('MINTSUCCESS ' + tokenFullUrl + ' ' + imgAdr);
 }
 
 const args = process.argv.slice(2);
