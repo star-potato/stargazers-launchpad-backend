@@ -85,7 +85,7 @@ async function burn2mint1(rocketId:string, fuelId:string, starsAddress:string, m
 
   //query rocket owner
   try {
-    const responseQueryRocket = await queryInfo(fuelId, config.sg721Rockets);
+    const responseQueryRocket = await queryInfo(rocketId, config.sg721Rockets);
     console.log('responseQueryRocket.access.owner', responseQueryRocket.access.owner);
     console.log('starsAddress', starsAddress);
     console.log('approvals length =', responseQueryRocket.access.approvals.length);
