@@ -115,7 +115,7 @@ async function burn2mint1(rocketId:string, fuelId:string, starsAddress:string, m
     try {
       const responseBurnRocket = await burn_token(rocketId, config.sg721Rockets);
     } catch(err){
-      console.error ('ROCKETBURNERROR');
+      console.error ('ROCKETBURNERROR : rocketId=' + rocketId + ' starsAddress=' + starsAddress + ' minter=' + minterAddress);
       console.error(err);
       return 'ROCKETBURNERROR';
     }
@@ -142,7 +142,7 @@ async function burn2mint1(rocketId:string, fuelId:string, starsAddress:string, m
       console.error ('MINTSUCCESS ' + tokenFullUrl + ' ' + imgAdr);
       return ('MINTSUCCESS ' + tokenFullUrl + ' ' + imgAdr);
     } catch(err){
-      console.error('MINTINGERROR');
+      console.error('MINTINGERROR : starsAddress=' + starsAddress + ' minter=' + minterAddress);
       console.error(err);
       return 'MINTINGERROR';
     }
